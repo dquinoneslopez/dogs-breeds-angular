@@ -1,0 +1,5 @@
+<mat-selection-list #breedsList (selectionChange)="onSelectionChange(breedsList.selectedOptions.selected)" class="animate__animated animate__fadeIn animate__faster">
+    <mat-list-option *ngFor="let breed of breeds" [value]="breed">
+        {{ breed.name }}
+    </mat-list-option>
+</mat-selection-list>

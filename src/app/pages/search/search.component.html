@@ -1,0 +1,5 @@
+<app-header></app-header>
+<div class="search-bar-container">
+    <app-search-bar (selectedOption)="onSelectedFilter($event)"></app-search-bar>
+</div>
+<app-dogs-cards [search]="breeds"></app-dogs-cards>

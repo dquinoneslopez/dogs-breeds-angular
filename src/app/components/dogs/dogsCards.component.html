@@ -1,0 +1,18 @@
+<div class="grid-container">
+    <mat-grid-list cols="6" rowHeight="350px">
+        <mat-grid-tile *ngFor="let card of pagedList" [colspan]="2" [rowspan]="1">
+            <app-dog-card [card]="card" [breed]="breed"></app-dog-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<div class="container">
+    <div class="row pb-4 justify-content-center">
+        <div class="col-4" *ngIf="breed">
+            <button mat-raised-button color="primary" routerLink="/home">Back</button>
+        </div>
+        <div class="col-6">
+            <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="OnPageChange($event)">
+            </mat-paginator>
+        </div>
+    </div>
+</div>
